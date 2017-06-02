@@ -12,6 +12,7 @@ pids
 logs
 results
 tmp
+themes
 
 #Build
 public/css/main.css
