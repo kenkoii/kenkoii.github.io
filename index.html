@@ -8,6 +8,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
 		<link rel="stylesheet" href="/css/main.css" />
+
+		<script src="/js/Chart.min.js"></script>
 		
 		
 	</head>
@@ -21,7 +23,8 @@
 					
 						<div id="logo">
 							<span class="image avatar48"><img src="img/avatar.jpg" alt="" /></span>
-							<h1 id="title">Jan Kenith Johannessen</h1>
+							<h1 id="title">Jan Kenith 
+ Johannessen</h1>
 							<p>Software Developer</p>
 						</div>
 
@@ -31,7 +34,8 @@
 							<ul>
 								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
 								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
+								
+								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Skills</span></a></li>
 								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
 								
 							</ul>
@@ -48,7 +52,7 @@
               
               <li><a href="https://www.facebook.com/kenkoii" class="icon fa-facebook"><span class="label">facebook</span></a></li>
               
-              <li><a href="https://www.instagram.com/kenkoii" class="icon fa-instagram"><span class="label">instagram</span></a></li>
+              <li><a href="https://www.instagram.com/_kenkoii" class="icon fa-instagram"><span class="label">instagram</span></a></li>
               
               <li><a href="https://www.github.com/kenkoii" class="icon fa-github"><span class="label">github</span></a></li>
               
@@ -68,11 +72,10 @@
 						<div class="container">
 
 							<header>
-								<h2 class="alt">Hi! I'm <strong>Kentoy</strong>,<br />
-								a full-stack web developer<br />
-								based in Cebu, Philippines.</h2>
-								<p>I am focused on web development using modern web technologies<br />
-								like <strong>Angular 2, React,</strong> and <strong>NodeJS</strong> to name a few.</p>
+								<h2 class="alt">Hey human! I'm <strong><span style="font-weight: 400">Kentoy</span></strong>,<br />
+								a software developer.<br /></h2>
+								<p>In a love-hate relationship with <strong>Javascript</strong>. <br />
+								Dabbles in <strong>Go</strong> and <strong>Python</strong>.</p>
 							</header>
 
 							<footer>
@@ -93,43 +96,83 @@
 
 							<a href="#" class="image featured filtered"><img src="img/about_temp.jpg" alt="" /></a>
 
-							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
-							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-							ornare iaculis.</p>
+							<p>
+								I'm a self-taught developer who specializes in web development using modern web technologies like Angular 2, React, and Node JS. 
+								I have also dabbled in other languages such as Go, Java, PHP, and Python.
+								I am currently working with a young and driven team in creating a mobile game. In recent projects I have been a part of, I usually handle server-side stuff and architecture planning + design. 
+							</p>
+							<p>
+								I'm passionate about making sure that I write code that humans, not just computers, can understand. I make sure that my code is of high quality, clear and human-friendly because I believe that good code should be elegant and self-explanatory. 
+								Having said all of that, I still have quite a way to go. There are still a lot concepts I don't know about and technology is advancing at a very fast rate so I make sure to constantly teach myself new technologies.
+							</p>
+							<p>
+								When I’m not at a computer, I enjoy playing computer games, slacking off, karaoke, listening to music, or lurking reddit. You can usually find me in the darkest spot in the room (or the spot closest to a dog).
+							</p>
 
 						</div>
 					</section>					
 
 				
+					
 					<section id="portfolio" class="two">
 						<div class="container">
 
 							<header>
-								<h2>Portfolio</h2>
+								<h2>Skills</h2>
 							</header>
-
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-							fusce hendrerit lacus ridiculus.</p>
-
-
-              <div class="row">
-                <div class="4u 12u$(mobile)">
-                  
-                </div>
-
-                <div class="4u 12u$(mobile)">
-                  
-                </div>
-
-                <div class="4u 12u$(mobile)">
-                  
-                </div>
-              </div>
+							
+							<canvas id="myChart" width="400" height="150"></canvas>
+							<script>
+							var ctx = document.getElementById("myChart");
+							var myChart = new Chart(ctx, {
+								type: 'bar',
+								barValueSpacing: 2,
+								data: {
+									labels: ["Javascript", "HTML/CSS", "Go", "GCP", "C#", "Resourcefulness"],
+									datasets: [{
+										label: 'Proficiency(self proclaimed)',
+										data: [8, 4, 6, 7, 3, 10],
+										backgroundColor: [
+											'rgba(255, 99, 132, 0.2)',
+											'rgba(54, 162, 235, 0.2)',
+											'rgba(255, 206, 86, 0.2)',
+											'rgba(75, 192, 192, 0.2)',
+											'rgba(153, 102, 255, 0.2)',
+											'rgba(255, 159, 64, 0.2)'
+										],
+										borderColor: [
+											'rgba(255,99,132,1)',
+											'rgba(54, 162, 235, 1)',
+											'rgba(255, 206, 86, 1)',
+											'rgba(75, 192, 192, 1)',
+											'rgba(153, 102, 255, 1)',
+											'rgba(255, 159, 64, 1)'
+										],
+										borderWidth: 1
+									}]
+								},
+								options: {
+									scales: {
+										yAxes: [{
+											ticks: {
+												beginAtZero: true,
+												callback: function(label, index, labels) {
+													console.log(label);
+													switch(label) {
+														case 10: return 'Rockstar';
+														case 8: return 'Decent';
+														case 6: return 'Not bad';
+														case 4: return 'Rookie';
+														case 2: return 'Terrible';
+														default: return '';
+													}
+												}
+											}
+										}]
+									}
+								}
+							});
+							</script>
 
 
 						</div>
@@ -144,12 +187,12 @@
 								<h2>Contact</h2>
 							</header>
 
-							<p>Want to collaborate with me? or hire me perhaps? Get in touch with me through the form below.</p>
+							<p>Interested in working together? Fill out the form below and I'll get in touch as soon as I can.</p>
 
-							<form method="post" action="#">
+							<form method="post" action="https://formspree.io/jankenith.johannessen@gmail.com">
 								<div class="row">
 									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="6u$ 12u$(mobile)"><input type="text" name="_replyto" placeholder="Email" /></div>
 									<div class="12u$">
 										<textarea name="message" placeholder="Message"></textarea>
 									</div>
@@ -173,6 +216,7 @@
 					</ul>
 
 			</div>
+
 
 		
 			<script src="/js/jquery.min.js"></script>
